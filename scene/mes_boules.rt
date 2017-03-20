@@ -1,0 +1,69 @@
+scene {
+    name { mes_boules }
+    camera {pos{0; 0; 0 }, dir{0; 1; 2}}
+    spot {
+        name {co1cuou}
+            type {point}
+            camera {pos{0; 0; 0}, dir{0;0;0}}
+            color { 0xffffff}
+    }
+    ambiance { 0xffffff; 0 }
+    objects {
+        simple_obj {
+            name { PLAN FOND }
+            camera {pos{0 ; 0 ; 50}, dir{0 ; 0 ; 1 }}
+            type { plan }
+            size { 1. ; 0.0 ; 0 }
+            effect { 0 ; 40 ; 0 ; 0 ; 0.3; 0.3}
+            color { 0xffffff }
+        }
+        simple_obj {
+            name { PLAN DERRIERE }
+            camera {pos{0 ; 0 ; -20}, dir{0 ; 0 ; 1 }}
+            type { plan }
+            size { 1. ; 0.0 ; 0 }
+            effect { 0 ; 0 ; 0 ; 0 ; 1; 1}
+            color { 0xffd700 }
+        }
+        simple_obj {
+            name { Sphere emeraude }
+            camera {pos{12; -8 ; 35}, dir{0 ; 0 ; 1 }}
+            type { sphere }
+            size { 5 ; 0.0 ; 0 }
+            effect { 0 ; 30 ; 0 ; 0 ; 1; 0.25}
+            color { 0x33AC91 }
+        }
+        simple_obj {
+            name { Sphere rubis }
+            camera {pos{-12; -8 ; 35}, dir{0 ; 0 ; 1 }}
+            type { sphere }
+            size { 5 ; 0.0 ; 0 }
+            effect { 0 ; 30 ; 0 ; 0 ; 1; 0.25}
+            color { 0xA80000 }
+        }
+        simple_obj {
+            name { Sphere saphir }
+            camera {pos{0; 12.42 ; 35}, dir{0 ; 0 ; 1 }}
+            type { sphere }
+            size { 5 ; 0.0 ; 0 }
+            effect { 0 ; 30 ; 0 ; 0 ; 1; 0.25}
+            color { 0x0F52BA }
+        }
+        simple_obj {
+            name { Sphere reflec }
+            camera {pos{0; 0 ; 50}, dir{0 ; 0 ; 1 }}
+            type { sphere }
+            size { 4 ; 0.0 ; 0 }
+            effect { 0 ; 100 ; 0 ; 0 ; 0; 0}
+            color { 0x787878 }
+        }
+        simple_obj {
+            name { Sphere refrac }
+            camera {pos{0; 0; 15}, dir{0 ; 0 ; 1 }}
+            type { sphere }
+            size { 2 ; 0.0 ; 0 }
+            effect { 80 ; 0 ; 2.33 ; 0 ; 1; 0.1}
+            color { 0xffffff }
+        }
+    }
+}

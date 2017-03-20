@@ -1,0 +1,53 @@
+scene {
+    name { or_et_ol }
+    camera {pos{100; 100; 0 }, dir{0; 1; 2}}
+    spot {
+        name {co1cuou}
+            type {point}
+            camera {pos{100; 100; 0}, dir{0;0;0}}
+            color { 0xffffff}
+    }
+    ambiance { 0xffffff; 15 }
+    objects {
+        simple_obj {
+            name { PLAN FOND }
+            camera {pos{100 ; 100 ; 50}, dir{0 ; 0 ; 1 }}
+            type { plan }
+            size { 1. ; 0.0 ; 0 }
+            effect { 0 ; 70 ; 0 ; 0 ; 0.5; 0.5}
+            color { 0xffffff }
+        }
+        simple_obj {
+            name { PLAN DROITE }
+            camera {pos{110 ; 100 ; 50}, dir{1 ; 0 ; 0 }}
+            type { plan }
+            size { 1. ; 0.0 ; 0 }
+            effect { 0 ; 60 ; 0 ; 0 ; 0.2; 0.2}
+            color { 0xffffff }
+        }
+        simple_obj {
+            name { PLAN GAUCHE }
+            camera {pos{90 ; 100 ; 50}, dir{1 ; 0 ; 0 }}
+            type { plan }
+            size { 1. ; 0.0 ; 0 }
+            effect { 0 ; 60 ; 0 ; 0 ; 0.2; 0.2}
+            color { 0xffffff }
+        }
+        simple_obj {
+            name { PLAN DERRIERE }
+            camera {pos{100 ; 100 ; -20}, dir{0 ; 0 ; 1 }}
+            type { plan }
+            size { 1. ; 0.0 ; 0 }
+            effect { 0 ; 0 ; 0 ; 0 ; 1; 1}
+            color { 0xffd700 }
+        }
+        simple_obj {
+            name { aureol }
+            camera {pos{100; 100 ; 35}, dir{0 ; 0 ; 1 }}
+            type { sphere }
+            size { 6 ; 0.0 ; 0 }
+            effect { 0 ; 0 ; 0 ; 0 ; 0; 0}
+            texture { ol }
+        }
+    }
+}
