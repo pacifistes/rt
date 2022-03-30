@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include  <stdint.h>
 
 char		*pointer(t_mod *s, va_list ap)
 {

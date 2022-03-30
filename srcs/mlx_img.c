@@ -55,7 +55,6 @@ void	*mlx_xpmtostruct(t_mlx *m, t_img *img, char *file)
 
 int		itow(t_mlx *m, void *img, int x, int y)
 {
-	if (!mlx_put_image_to_window(m->mlx, m->win, img, x, y))
-		error(2, "mlx_put_image_to_window()");
+	mlx_put_image_to_window(m->mlx, m->win, img, x, y);
 	return (1);
 }

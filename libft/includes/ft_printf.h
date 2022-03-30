@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include "libft.h"
+# include <stdint.h>
 
 # define FMT format[s->i + 1]
 # define RED "\e[0;31m"

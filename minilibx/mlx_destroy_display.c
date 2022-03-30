@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   mlx_destroy_display.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ocarta-l <ocarta-l@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/14 17:09:09 by ocarta-l          #+#    #+#             */
-/*   Updated: 2017/02/18 19:04:57 by mlinhard         ###   ########.fr       */
+/*   Created: 2020/10/03 18:56:35 by mg                #+#    #+#             */
+/*   Updated: 2020/10/04 01:55:35 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "raytra_gen.h"
-#include "raystruct.h"
+#include "mlx_int.h"
 
-int			main(void)
+int	mlx_destroy_display(t_xvar *xvar)
 {
-	t_gen	s;
-
-	ft_bzero(&s, sizeof(t_gen));
-	s.view_angle[0] = 0;
-	s.view_angle[1] = 0;
-	s.view_angle[2] = 0;
-	mlx_start(&s, &s.mlx);
-	return (0);
+	XCloseDisplay(xvar->display);
 }

@@ -4,7 +4,7 @@ SRCS = ft_printf.c ./arg_decimal.c ./arg_string.c ./arg_base_dec.c ./ft_memset.c
 
 OBJS = $(SRCS:.c=.o)
 
-GCCF = -Wall -Werror -Wextra
+GCCF =
 
 all: $(NAME)
 

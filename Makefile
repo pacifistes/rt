@@ -136,9 +136,9 @@ SRCS = 	main.c \
 
 SRC = $(addprefix $(SRCSPATH), $(SRCS))
 
-WFLAGS = -Wall -Werror -Wextra -march=native -O3
+WFLAGS = -march=native -O3
 
-LFLAGS = -L libft/ -lft -lm -lmlx -framework OpenGL -framework AppKit
+LFLAGS = -L libft/ -lft -lm -I minilibx/ -L minilibx/ -lmlx_Linux -lpthread -lXext -lX11 -lXrender
 MIKAFLAGS = -L libft/ -lft -L minilibx/ -lmlx -framework OpenGL -framework AppKit
 
 CC = gcc
@@ -148,11 +148,11 @@ OBJ = $(SRC:.c=.o)
 all : $(NAME)
 
 %.o: %.c
-	$(CC) -c $(WFLAGS) -I $(LIBFT_INCLUDES) -I $(INCLUDES) $< -o $@
+	$(CC) -c $(WFLAGS) -I $(LIBFT_INCLUDES) -I $(INCLUDES) -I minilibx/ $< -o $@
 
 $(NAME) : $(OBJ)
 	make -C libft
-	$(CC) -o $(NAME) $(OBJ) $(WFLAGS) $(LFLAGS) -I $(INCLUDES)
+	$(CC) -o $(NAME) $(OBJ) $(WFLAGS) $(LFLAGS) -I $(INCLUDES) 
 
 lib:
 	make -C libft re
